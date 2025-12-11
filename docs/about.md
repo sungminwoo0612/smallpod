@@ -3,6 +3,8 @@ title: About
 description: Contrail Tech Blog 소개
 ---
 
+# About
+
 안녕하세요! AI System, Engineering, Architecture 분야에 관심 많은 엔지니어입니다.
 
 ## 관심 분야

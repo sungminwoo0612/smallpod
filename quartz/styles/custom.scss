@@ -1,3 +1,81 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+html {
+  font-size: 14px;
+}
+
+body {
+  font-size: 0.9rem;
+}
+
+.page article > h1 {
+  font-size: 1.6rem; // 기본 2rem에서 줄임
+}
+
+h1 {
+  font-size: 1.5rem; // 기본 1.75rem에서 줄임
+}
+
+h2 {
+  font-size: 1.25rem; // 기본 1.4rem에서 줄임
+}
+
+h3 {
+  font-size: 1rem; // 기본 1.12rem에서 줄임
+}
+
+h4, h5, h6 {
+  font-size: 0.9rem; // 기본 1rem에서 줄임
+}
+
+code {
+  font-size: 0.85em; // 인라인 코드 크기 줄이기
+}
+
+pre > code {
+  font-size: 0.9rem; // 코드 블록 크기
+}
+
+// Explorer 폴더 텍스트를 파일과 동일한 크기로
+.folder-container {
+  & div > a,
+  & div > button span {
+    font-size: 0.9rem; // 파일 링크와 동일한 크기
+    font-weight: normal; // 굵기 제거
+  }
+}
+
+// Explorer 접기 버튼 비활성화 (화살표 숨기기, 클릭 비활성화)
+button#explorer {
+  cursor: default;
+  pointer-events: none;
+  
+  & h2 {
+    display: none; // "탐색기" 제목 숨기기
+  }
+  
+  & .fold {
+    display: none; // 화살표 아이콘 숨기기
+  }
+}
+
+// Explorer 내용은 항상 표시
+#explorer-content {
+  display: block !important;
+  max-height: none !important;
+  visibility: visible !important;
+}
+
+// 폴더 아이콘(꺽쇠) 숨기기
+.folder-icon {
+  display: none !important;
+}
+
+// 태그 좌측 정렬 (우측으로 밀리는 현상 수정)
+.tags {
+  justify-self: start !important; // end에서 start로 변경
+}
+
+.section-li > .section > .tags {
+  justify-content: flex-start !important; // flex-end에서 flex-start로 변경
+}
